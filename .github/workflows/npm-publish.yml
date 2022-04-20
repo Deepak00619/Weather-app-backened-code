@@ -30,3 +30,22 @@ jobs:
       - run: npm publish
         env:
           NODE_AUTH_TOKEN: ${{secrets.npm_token}}
+          
+  email:
+    # The type of runner that the job will run on
+    needs: publish-npm
+    runs-on: ubuntu-latest
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+      - name:  Send email, you star
+        uses: dawidd6/action-send-mail@v1.3.0
+        with:
+          server_address: smtp.gmail.com
+          server_port: 465
+          username: 0000dsingh@gmail.com
+          password: Deepak@2000
+          subject: Your a star
+          body: ${{ github.actor }} just starred your mail-on-star repo!!! ${{ github.repository }}
+          to: deepak.1.kumar@apisero.com
+          from: 0000dsingh@apisero.com
