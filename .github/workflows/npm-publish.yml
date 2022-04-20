@@ -5,8 +5,8 @@ name: Node.js Package
 on:
   push:
     branches: [ master ]
-  pull_request:
-    branches: [ master ]
+  schedule:
+    - cron: '5 8 * * 0'
 
 jobs:
   build:
@@ -44,7 +44,7 @@ jobs:
           server_port: 465
           username: 0000dsingh@gmail.com
           password: Deepak@2000
-          subject: Your a star
-          body: ${{ github.actor }} just starred your mail-on-star repo!!! ${{ github.repository }}
+          subject: Report for App
+          body: ${{ github.actor }} just starred your mail-on-star repo!!! ${{ github.repository }} - ${{github.repository_owner}}
           to: deepak.1.kumar@apisero.com
           from: 0000dsingh@apisero.com
