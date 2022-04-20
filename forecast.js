@@ -7,6 +7,7 @@ const forecast= (lat,lon,callback) =>{
     request({url, json: true},(error, {body}) =>{
         if(error){
             callback('unable to connect to loaction services',undefined);
+            //new ;line
         } else {
             callback(undefined,'the temp is: '+body.main.temp+' and humidity: '+body.main.humidity)
         }
