@@ -4,7 +4,7 @@ const forecast= require('./utils/forecast');
 
 // Input
 const address= process.argv[2];
-//code
+//code starts from here
 if(!address){
     console.log('Please provide an address');
 }else {
