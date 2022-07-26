@@ -5,6 +5,7 @@ const forecast= require('./utils/forecast');
 // Input
 //gjhwgdgej
 ///jhjk
+//ar
 const address= process.argv[2];
 //code starts from here
 if(!address){
