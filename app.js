@@ -6,6 +6,7 @@ const forecast= require('./utils/forecast');
 //gjhwgd
 //dep
 //aryan
+//new
 const address= process.argv[2];
 //code starts from here
 if(!address){
