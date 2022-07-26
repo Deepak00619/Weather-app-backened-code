@@ -3,10 +3,7 @@ const geocode= require('./utils/geocode');
 const forecast= require('./utils/forecast');
 
 // Input
-//gjhwgdgej
-///jhjk
-//ar
-//ahkjhk
+//gjhwgd
 //dep
 const address= process.argv[2];
 //code starts from here
